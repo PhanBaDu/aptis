@@ -58,7 +58,7 @@ class _ReadingQuizPageState extends State<ReadingQuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Topic ${widget.topic.id}')),
+      appBar: AppBar(title: const Text('Luyện tập Reading Part 2 & 3')),
       body: SafeArea(
         child: Column(
           children: [
@@ -127,11 +127,6 @@ class _ReadingQuizPageState extends State<ReadingQuizPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text('Bạn đã sắp xếp đúng thứ tự các câu văn.'),
-                      const SizedBox(height: 10),
-                      Text(
-                        'Key Points: ${widget.topic.keyPoints}',
-                        style: const TextStyle(fontSize: 13, fontStyle: FontStyle.italic),
-                      ),
                     ],
                   ),
                 ),
@@ -180,6 +175,53 @@ class _ReadingQuizPageState extends State<ReadingQuizPage> {
                     ),
                   ],
                 ],
+              ),
+            ),
+            // Vietnamese Hint Section
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.2),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.lightbulb_outline_rounded,
+                          size: 18,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          'GỢI Ý HỌC THUỘC (HINT)',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.secondary,
+                            letterSpacing: 1.1,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      '-> ${widget.topic.hint}',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Theme.of(context).colorScheme.onSecondaryContainer,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

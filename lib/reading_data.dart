@@ -4,12 +4,14 @@ class ReadingTopicData {
     required this.title,
     required this.sentences,
     required this.keyPoints,
+    required this.hint,
   });
 
   final int id;
   final String title;
   final List<String> sentences;
   final String keyPoints;
+  final String hint;
 }
 
 const List<ReadingTopicData> readingTopics = [
@@ -24,6 +26,7 @@ const List<ReadingTopicData> readingTopics = [
       'Some of those were about growing plants and some animals in a spaceship.',
     ],
     keyPoints: 'Parents support → degree → USA training → research team → space experiments with plants and animals',
+    hint: "Cha mẹ ủng hộ -> Bằng cấp -> Đào tạo Mỹ -> Nhóm nghiên cứu -> Thí nghiệm thực vật/động vật không gian.",
   ),
   ReadingTopicData(
     id: 2,
@@ -36,6 +39,7 @@ const List<ReadingTopicData> readingTopics = [
       'He performed for two hours and everyone had great fun.',
     ],
     keyPoints: 'Government funding → free event → 5000 people → early arrival & shopping → staff enjoyed show → 2 hours performance',
+    hint: "Chính quyền tài trợ -> Miễn phí/5000 người -> Đến sớm mua sắm -> Nhân viên xem ca sĩ diễn -> Diễn 2 giờ.",
   ),
   ReadingTopicData(
     id: 3,
@@ -48,6 +52,7 @@ const List<ReadingTopicData> readingTopics = [
       'It tasted quite good with cheese topping, so I will definitely come back again!',
     ],
     keyPoints: 'Crowded first day → found table → few menu items → ordered expensive sandwich → delicious with cheese → will return',
+    hint: "Đông đúc/Nhân viên bận -> Có bàn/menu -> Thất vọng vì ít món -> Chọn sandwich đắt nhất -> Ngon/Sẽ quay lại.",
   ),
   ReadingTopicData(
     id: 4,
@@ -60,6 +65,7 @@ const List<ReadingTopicData> readingTopics = [
       'Things have changed over time, and some of them have earned millions of dollars after appearing in films.',
     ],
     keyPoints: 'Old films: black & white, no sound → low budget → poor actors → Modern: big earnings from films',
+    hint: "Phim xưa khác nay -> Đen trắng/Không âm thanh -> Kinh phí thấp -> Diễn viên kiếm ít tiền -> Nay kiếm triệu đô.",
   ),
   ReadingTopicData(
     id: 5,
@@ -72,6 +78,7 @@ const List<ReadingTopicData> readingTopics = [
       'They were all very hungry after all these, so they enjoyed tasty food and drinks with their parents.',
     ],
     keyPoints: 'Adult 10-mile race → Ms Kamur wins → children\'s activities (football, jumping, swimming) → food & drinks with parents',
+    hint: "Sáng thứ 7 chạy đua -> Bà Kamur thắng -> Thi đấu trẻ em -> Bóng đá/nhảy/bơi -> Ăn uống cùng cha mẹ.",
   ),
   ReadingTopicData(
     id: 6,
@@ -84,6 +91,7 @@ const List<ReadingTopicData> readingTopics = [
       'It is more convenient to travel to other part of the world due to the improvement in transports.',
     ],
     keyPoints: 'Past: only rich travel → cars & trains cheaper → airplanes easier → fast flying → more foreign holidays → convenient travel',
+    hint: "Quá khứ: Chỉ người giàu đi xa -> Ô tô/Tàu hỏa rẻ hơn -> Máy bay dễ hơn -> Đi nước ngoài nhiều -> Giao thông cải thiện.",
   ),
   ReadingTopicData(
     id: 7,
@@ -96,6 +104,7 @@ const List<ReadingTopicData> readingTopics = [
       'They started to follow him on social media and he is now very famous.',
     ],
     keyPoints: 'High school art & music → stage performances → colorful clothes & face paint → attracted attention → social media followers → famous',
+    hint: "Trước khi nổi tiếng: Học nghệ thuật -> Biểu diễn trên sân khấu -> Quần áo sặc sỡ/vẽ mặt -> Thu hút sự chú ý -> Nổi tiếng MXH.",
   ),
   ReadingTopicData(
     id: 8,
@@ -108,6 +117,7 @@ const List<ReadingTopicData> readingTopics = [
       'Today, apps help track calories and suggest healthy recipes.',
     ],
     keyPoints: 'Past: high sugar & unhealthy fats → limited fresh produce → Modern: fresh whole foods → nutritionist education → calorie tracking apps',
+    hint: "Quá khứ: Nhiều đường/béo -> Khó mua rau củ tươi -> Nay: Ưu tiên thực phẩm tươi -> Chuyên gia tư vấn -> Ứng dụng theo dõi.",
   ),
   ReadingTopicData(
     id: 9,
@@ -120,6 +130,7 @@ const List<ReadingTopicData> readingTopics = [
       'Families stayed late, enjoying food and drinks under colorful lights.',
     ],
     keyPoints: 'Friday evening live music → 100 people → Ms. Carter organized → awards for food → dance workshops & pet parade → colorful lights',
+    hint: "Tối thứ 6: Ca nhạc -> 100 người/Bà Carter -> Giải thưởng món ăn -> Khiêu vũ/thú cưng -> Đèn màu lung linh.",
   ),
   ReadingTopicData(
     id: 10,
@@ -132,6 +143,7 @@ const List<ReadingTopicData> readingTopics = [
       'Modern buses often use electric power, reducing pollution in urban areas.',
     ],
     keyPoints: 'Modern buses: efficient → old buses: no AC & poor seats → past: few routes → today: better training → electric power reduces pollution',
+    hint: "Nay: Xe buýt hiệu quả -> Xưa: Không điều hòa/ghế xấu -> Ít tuyến do thiếu tiền -> Nay: Đào tạo tốt -> Xe điện bảo vệ môi trường.",
   ),
   ReadingTopicData(
     id: 11,
@@ -144,6 +156,7 @@ const List<ReadingTopicData> readingTopics = [
       'Modern AI tools help businesses to analyze data and make better decisions.',
     ],
     keyPoints: 'AI revolutionized industries → early systems: limited pattern recognition → high costs hindered → modern: advanced models → business data analysis',
+    hint: "Cách mạng hóa ngành công nghiệp -> Sơ khai: Nhận diện đơn giản -> Chi phí cao cản trở -> Nay: Mô hình phức tạp -> Giúp DN phân tích dữ liệu.",
   ),
   ReadingTopicData(
     id: 12,
@@ -156,6 +169,7 @@ const List<ReadingTopicData> readingTopics = [
       'Such comparisons will make your writing more interesting and meaningful.',
     ],
     keyPoints: 'Research first → learn people & history → write like real experience → compare with own country → more interesting writing',
+    hint: "Nghiên cứu trước -> Tìm hiểu con người/lịch sử -> Viết như thật dù chưa đi -> So sánh với nước mình -> Bài viết thú vị hơn.",
   ),
   ReadingTopicData(
     id: 13,
@@ -168,6 +182,7 @@ const List<ReadingTopicData> readingTopics = [
       'Managers now utilize software to monitor project progress remotely.',
     ],
     keyPoints: 'Flexible models → past: rigid 9-5 hours → technology barriers → today: shorter workweeks → remote software monitoring',
+    hint: "Mô hình linh hoạt -> Xưa: 9h sáng đến 5h chiều -> Rào cản công nghệ -> Nay: Tuần làm việc ngắn -> Quản lý từ xa.",
   ),
   ReadingTopicData(
     id: 14,
@@ -180,6 +195,7 @@ const List<ReadingTopicData> readingTopics = [
       'This meal will be provided on the second floor of the engineering building.',
     ],
     keyPoints: '10 AM presentation → meet department heads & teachers → sports tour → stay with students until lunch → meal at 2nd floor engineering',
+    hint: "10h sáng thuyết trình -> Gặp trưởng khoa/giáo viên -> Tham quan thể thao -> Ở cùng sinh viên -> Ăn trưa tầng 2 tòa kỹ thuật.",
   ),
   ReadingTopicData(
     id: 15,
@@ -192,6 +208,7 @@ const List<ReadingTopicData> readingTopics = [
       'After this time, other students are able to ask questions and you need to answer them.',
     ],
     keyPoints: 'Choose 2+ items → gather images & text → create presentation → 5 minutes talk → answer student questions',
+    hint: "Chọn ít nhất 2 món -> Có hình ảnh/văn bản -> Tạo bài thuyết trình -> Nói 5 phút -> Trả lời câu hỏi.",
   ),
   ReadingTopicData(
     id: 16,
@@ -204,6 +221,7 @@ const List<ReadingTopicData> readingTopics = [
       'After the workshops, awards were given for the most creative wellness ideas.',
     ],
     keyPoints: 'Friday wellness day → 50+ employees → Mr.A stress relief workshop → yoga & time management → healthy snacks → creative awards',
+    hint: "Tổ chức thứ 6: Cân bằng việc/sống -> 50 người/Ông A -> Yoga/Quản lý thời gian -> Đồ ăn tốt -> Giải sáng tạo.",
   ),
   ReadingTopicData(
     id: 17,
@@ -216,6 +234,7 @@ const List<ReadingTopicData> readingTopics = [
       'After the workshops, prizes were awarded for the most creative health posters.',
     ],
     keyPoints: 'Saturday wellness fair → 60+ participants → Dr. A fitness workshop → cooking & mindfulness → family healthy snacks → poster prizes',
+    hint: "Chiều thứ 7: Sống khỏe -> 60 người/Bác sĩ A -> Nấu ăn/Thiền -> Gia đình ăn nhẹ -> Giải poster sáng tạo.",
   ),
   ReadingTopicData(
     id: 18,
@@ -228,6 +247,7 @@ const List<ReadingTopicData> readingTopics = [
       'She later joined a team, contributing her skills and knowledge.',
     ],
     keyPoints: 'Father: nurse, Mother: teacher → parents motivated → hard work & achievements → USA training program → joined team',
+    hint: "Bố tá/Mẹ giáo viên -> Khuyên học khoa học -> Chăm chỉ/Đạt cột mốc -> Đào tạo ở Mỹ -> Tham gia đội nhóm.",
   ),
   ReadingTopicData(
     id: 19,
@@ -240,6 +260,7 @@ const List<ReadingTopicData> readingTopics = [
       'Some experiments involved growing plants and observing animals aboard.',
     ],
     keyPoints: 'Parents encouraged → university science → excellent grades → USA training → space research team → experiments with plants & animals',
+    hint: "Cha mẹ khuyên học khoa học -> Điểm cao/Đào tạo Mỹ -> Đam mê không gian -> Bay vào vũ trụ -> Thí nghiệm cây/thú.",
   ),
   ReadingTopicData(
     id: 20,
@@ -252,6 +273,7 @@ const List<ReadingTopicData> readingTopics = [
       'Modern IoT systems provide real-time data tracking and automation.',
     ],
     keyPoints: 'IoT connects devices → early: slow internet limits → high costs → modern: smart devices → real-time tracking & automation',
+    hint: "Kết nối thiết bị -> Sơ khai: Internet chậm -> Chi phí cao -> Nay: Thiết bị thông minh -> Theo dõi/Tự động hóa thời gian thực.",
   ),
   ReadingTopicData(
     id: 21,
@@ -264,6 +286,7 @@ const List<ReadingTopicData> readingTopics = [
       'In the end, I went for the most expensive salad on the menu.',
     ],
     keyPoints: 'New café at street end → busy, lively → staff brought menu → few items → chose expensive salad',
+    hint: "Cửa hàng cuối phố -> Đông đúc -> Nhân viên đưa menu -> Ngạc nhiên vì ít món -> Chọn salad đắt nhất.",
   ),
   ReadingTopicData(
     id: 22,
@@ -276,6 +299,7 @@ const List<ReadingTopicData> readingTopics = [
       'The customer said the sandwich was delicious and would come back again.',
     ],
     keyPoints: 'Crowded café → staff helped find table → menu surprising → expensive sandwich → delicious → will return',
+    hint: "Quán đông khách -> Có bàn/menu -> Menu khác mong đợi -> Gọi sandwich đắt nhất -> Ngon/Quay lại.",
   ),
   ReadingTopicData(
     id: 23,
@@ -288,6 +312,7 @@ const List<ReadingTopicData> readingTopics = [
       'When I tasted it, I found it really delicious and knew I would come back.',
     ],
     keyPoints: 'First visit new coffee shop → skeptical but tried → diverse menu → chose one dish → delicious → will return',
+    hint: "Lần đầu ghé quán -> Nghi ngờ nhưng thử -> Menu đa dạng -> Chọn 1 món -> Ngon/Quay lại.",
   ),
   ReadingTopicData(
     id: 24,
@@ -300,6 +325,7 @@ const List<ReadingTopicData> readingTopics = [
       'Local guides now offer personalized tours that give more authentic experiences.',
     ],
     keyPoints: 'Modern: more choices → past: guidebooks & paper maps → limited booking → today: online booking easy → personalized authentic tours',
+    hint: "Nay: Nhiều lựa chọn -> Xưa: Sách hướng dẫn/bản đồ giấy -> Công nghệ hạn chế -> Nay: Đặt chỗ online -> Hướng dẫn viên bản địa.",
   ),
   ReadingTopicData(
     id: 25,
@@ -312,6 +338,7 @@ const List<ReadingTopicData> readingTopics = [
       'In the evenings, they unwind by reading books on productivity and well-being.',
     ],
     keyPoints: 'Flexible hours → white desk open office → planner for tasks → homemade lunch sandwich → evening reading on productivity',
+    hint: "Giờ linh hoạt -> Bàn trắng ở văn phòng mở -> Planner cho tuần làm việc ngắn -> Sandwich tự làm -> Đọc sách năng suất.",
   ),
   ReadingTopicData(
     id: 26,
@@ -324,6 +351,7 @@ const List<ReadingTopicData> readingTopics = [
       'Finally, each group member took turns answering the questions.',
     ],
     keyPoints: 'Prepare materials → 10 minutes presentation → use images → students ask questions → take turns answering',
+    hint: "Chuẩn bị tài liệu -> Thuyết trình 10 phút -> Dùng hình ảnh giải thích -> Sinh viên hỏi -> Thay phiên trả lời.",
   ),
   ReadingTopicData(
     id: 27,
@@ -336,6 +364,7 @@ const List<ReadingTopicData> readingTopics = [
       'Many influencers now earn income primarily through brand sponsorships.',
     ],
     keyPoints: 'Past: slow internet → basic text posts → evolved design → complex algorithms for personalization → influencer brand sponsorships',
+    hint: "Xưa: Internet chậm/Khó tải video -> Chỉ có văn bản -> Thiết kế tiến hóa -> Thuật toán cá nhân hóa -> Influencer kiếm tiền.",
   ),
   ReadingTopicData(
     id: 28,
@@ -348,6 +377,7 @@ const List<ReadingTopicData> readingTopics = [
       'After the presentations, you\'ll be able to explore different departments.',
     ],
     keyPoints: 'Contact before → prepare ID card → show for entry → Q&A with students → explore departments',
+    hint: "Liên hệ trước -> Chuẩn bị thẻ ID -> Dùng thẻ vào nghe giảng -> Q&A với sinh viên -> Tham quan khoa.",
   ),
   ReadingTopicData(
     id: 29,
@@ -360,6 +390,7 @@ const List<ReadingTopicData> readingTopics = [
       'Today, buses and trains are among the most common transportation options.',
     ],
     keyPoints: 'Past: only wealthy travel → air travel for professionals → buses & trains affordable → everyone can travel → common options today',
+    hint: "Xưa: Chỉ người giàu -> Sau đó: Máy bay cho doanh nhân -> Xe buýt/tàu hỏa rẻ -> Ai cũng được đi -> Nay: Phổ biến.",
   ),
   ReadingTopicData(
     id: 30,
@@ -372,5 +403,6 @@ const List<ReadingTopicData> readingTopics = [
       'Nowadays, actors and producers can earn a lot of money from films.',
     ],
     keyPoints: 'Old films: black & white, no sound → low budget → poor actor earnings → Modern: high earnings from films',
+    hint: "Nay khác xưa -> Xưa: Đen trắng/không tiếng -> Kinh phí thấp -> Diễn viên ít tiền -> Nay: Kiếm nhiều tiền.",
   ),
 ];

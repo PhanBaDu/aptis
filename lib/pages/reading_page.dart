@@ -5,7 +5,10 @@ import '../widgets/listening_mode_button.dart'; // Reusing the button style
 import '../reading_data.dart';
 import 'reading_study_page.dart';
 import 'reading_picker_pages.dart';
+import 'reading_quiz_page.dart';
 import 'reading_part1_picker_page.dart';
+import 'reading_part1_quiz_page.dart';
+import '../reading_part1_data.dart';
 import 'reading_answers_page.dart';
 import 'reading_part4_picker_page.dart';
 import 'reading_part5_picker_page.dart';
@@ -69,7 +72,7 @@ class ReadingPage extends StatelessWidget {
           description: 'Sắp xếp các câu văn thành một đoạn văn hoàn chỉnh (${readingTopics.length} chủ đề).',
           icon: Icons.looks_two_rounded,
           color: data.color,
-          page: const ReadingPickerPage(title: 'PART 2 & 3 - Sắp xếp câu'),
+          page: ReadingQuizPage(topic: readingTopics[0]),
         ),
         const SizedBox(height: 12),
         ListeningModeButton(

@@ -4,9 +4,10 @@ import '../reading_part1_data.dart';
 import '../widgets/practice_card.dart';
 
 class ReadingPart1QuizPage extends StatefulWidget {
-  const ReadingPart1QuizPage({super.key, required this.topic});
+  const ReadingPart1QuizPage({super.key, required this.topic, this.endId});
 
   final ReadingPart1Data topic;
+  final int? endId;
 
   @override
   State<ReadingPart1QuizPage> createState() => _ReadingPart1QuizPageState();
@@ -56,11 +57,14 @@ class _ReadingPart1QuizPageState extends State<ReadingPart1QuizPage> {
 
   void _nextTopic() {
     final currentIndex = readingPart1Topics.indexOf(widget.topic);
-    if (currentIndex < readingPart1Topics.length - 1) {
+    final nextTopic = (currentIndex < readingPart1Topics.length - 1) ? readingPart1Topics[currentIndex + 1] : null;
+
+    if (nextTopic != null && (widget.endId == null || nextTopic.id <= widget.endId!)) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute<void>(
           builder: (context) => ReadingPart1QuizPage(
-            topic: readingPart1Topics[currentIndex + 1],
+            topic: nextTopic,
+            endId: widget.endId,
           ),
         ),
       );
@@ -72,7 +76,7 @@ class _ReadingPart1QuizPageState extends State<ReadingPart1QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Reading Part 1 - Câu ${widget.topic.id}')),
+      appBar: AppBar(title: const Text('Luyện tập Reading Part 1')),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
@@ -101,21 +105,78 @@ class _ReadingPart1QuizPageState extends State<ReadingPart1QuizPage> {
               const SizedBox(height: 24),
               Row(
                 children: [
-                  if (!_isAllCorrect)
+                  if (!_isAllCorrect) ...[
                     Expanded(
                       child: OutlinedButton(
                         onPressed: _initializeQuiz,
                         child: const Text('Làm lại'),
                       ),
                     ),
-                  if (!_isAllCorrect) const SizedBox(width: 12),
-                  Expanded(
-                    child: FilledButton(
-                      onPressed: _isAllCorrect ? _nextTopic : (_allFilled ? _checkAnswers : null),
-                      child: Text(_isAllCorrect ? 'Câu tiếp theo' : 'Kiểm tra'),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: FilledButton(
+                        onPressed: _allFilled ? _checkAnswers : null,
+                        child: const Text('Kiểm tra'),
+                      ),
                     ),
-                  ),
+                  ] else
+                    Expanded(
+                      child: FilledButton.icon(
+                        onPressed: _nextTopic,
+                        icon: const Icon(Icons.arrow_forward_rounded),
+                        label: const Text('Câu tiếp theo'),
+                        style: FilledButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
                 ],
+              ),
+              const SizedBox(height: 32),
+              // Vietnamese Hint Section
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.2),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.lightbulb_outline_rounded,
+                          size: 18,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          'GỢI Ý HỌC THUỘC (HINT)',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.secondary,
+                            letterSpacing: 1.1,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      '-> ${widget.topic.hint}',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Theme.of(context).colorScheme.onSecondaryContainer,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

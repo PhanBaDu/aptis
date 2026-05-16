@@ -4,12 +4,14 @@ class ReadingPart1Data {
     required this.text,
     required this.answers,
     required this.distractors,
+    required this.hint,
   });
 
   final int id;
   final String text;
   final List<String> answers;
   final List<List<String>> distractors;
+  final String hint;
 }
 
 const List<ReadingPart1Data> readingPart1Topics = [
@@ -24,6 +26,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['bad', 'tired'],
       ['drinks', 'meals'],
     ],
+    hint: "Buổi sáng, bạn bè, để lại, tốt, đồ ăn.",
   ),
   ReadingPart1Data(
     id: 2,
@@ -36,6 +39,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['see', 'know'],
       ['news', 'shows'],
     ],
+    hint: "Ga tàu, trạm dừng, màu xanh, gặp, phim.",
   ),
   ReadingPart1Data(
     id: 3,
@@ -48,6 +52,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['friends', 'animals'],
       ['see', 'call'],
     ],
+    hint: "Yêu thích, nhỏ, cửa hàng, mọi người, ghé thăm.",
   ),
   ReadingPart1Data(
     id: 4,
@@ -60,6 +65,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['lunch', 'breakfast'],
       ['news', 'tv'],
     ],
+    hint: "Ga tàu, trạm dừng, màu xanh, bữa tối, phim.",
   ),
   ReadingPart1Data(
     id: 5,
@@ -72,6 +78,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['dinner', 'lunch'],
       ['yoga', 'exercise'],
     ],
+    hint: "Công viên, lớp học, bạc, bữa sáng, thiền.",
   ),
   ReadingPart1Data(
     id: 6,
@@ -84,6 +91,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['lunch', 'dinner'],
       ['sports', 'music'],
     ],
+    hint: "Xe đạp, quầy hàng, cây cối, bữa sáng, trò chơi.",
   ),
   ReadingPart1Data(
     id: 7,
@@ -96,6 +104,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['do', 'make'],
       ['see', 'look'],
     ],
+    hint: "Nhà, khách hàng, dễ dàng, chuẩn bị, xem.",
   ),
   ReadingPart1Data(
     id: 8,
@@ -108,6 +117,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['talk', 'tell'],
       ['alone', 'happy'],
     ],
+    hint: "Thân thiện, đi bộ, đầu tiên, nói, cùng nhau.",
   ),
   ReadingPart1Data(
     id: 9,
@@ -120,6 +130,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['dinner', 'lunch'],
       ['yoga', 'exercise'],
     ],
+    hint: "Xe đạp, cao, cây cối, bữa sáng, thiền.",
   ),
   ReadingPart1Data(
     id: 10,
@@ -132,6 +143,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['car', 'bus'],
       ['talk', 'write'],
     ],
+    hint: "Ghé thăm, phòng, nóng, tàu hỏa, nói.",
   ),
   ReadingPart1Data(
     id: 11,
@@ -144,6 +156,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['road', 'path'],
       ['eat', 'have'],
     ],
+    hint: "Nông trại, hào hứng, bên trái, đường phố, uống.",
   ),
   ReadingPart1Data(
     id: 12,
@@ -156,6 +169,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['run', 'swim'],
       ['beautiful', 'nice'],
     ],
+    hint: "Nhà, lái xe, bạn bè, đi bộ, xinh đẹp.",
   ),
   ReadingPart1Data(
     id: 13,
@@ -168,6 +182,7 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['many', 'some'],
       ['letters', 'names'],
     ],
+    hint: "Nông thôn, phòng, lớp học, khác, từ ngữ.",
   ),
   ReadingPart1Data(
     id: 14,
@@ -180,5 +195,6 @@ const List<ReadingPart1Data> readingPart1Topics = [
       ['houses', 'plants'],
       ['young', 'weak'],
     ],
+    hint: "Nhỏ, ở lại, khu vườn, cây cối, già.",
   ),
 ];
